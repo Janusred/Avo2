@@ -16,19 +16,31 @@ window.fetch(`${baseUrl}/api/avo`)
         const todoslositem = [];
 
         respuestaJson.data.forEach((item) => {
+
             //imagen
             const imagen = document.createElement("img");
             imagen.src  = `${baseUrl}${item.image}`;
             //document.body.appendChild(imagen);
+            imagen.className="img1";
+
             //Titulo
             const titulo = document.createElement("h2");
             titulo.textContent = item.name;
-            titulo.style= "font-size:2rem";
+            titulo.className="tit";
             //document.body.appendChild(titulo);
+            
+
             //precio
             const price = document.createElement("div");
             price.textContent = item.price;
             //document.body.appendChild(price);
+            price.className="pri";
+            
+
+            
+
+
+
 
             const container = document.createElement("div");
             container.append(imagen, titulo, price);
