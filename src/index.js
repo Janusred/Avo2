@@ -9,6 +9,17 @@ console.log('Hola Janus :)')
 const baseUrl = "https://platzi-avo.vercel.app";
 const appNode=document.querySelector('#app');
 
+const formatPrice=(price)=>{
+
+const newPrice = new window.Intl.NumberFormat("en-EN",{
+    style:"currency",
+    currency:"USD",
+}).format(price);
+
+    return newPrice;
+
+};
+
 window.fetch(`${baseUrl}/api/avo`)
     .then((respuesta) => respuesta.json())
 
@@ -26,7 +37,7 @@ window.fetch(`${baseUrl}/api/avo`)
             //Titulo
             const titulo = document.createElement("h2");
             titulo.textContent = item.name;
-            titulo.className="tit";
+            titulo.className= "tit";
             //document.body.appendChild(titulo);
             
 
@@ -35,6 +46,7 @@ window.fetch(`${baseUrl}/api/avo`)
             price.textContent = item.price;
             //document.body.appendChild(price);
             price.className="pri";
+            price.textContent= formatPrice(item.price);
             
 
             
