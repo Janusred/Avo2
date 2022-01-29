@@ -2,7 +2,7 @@
 module.exports = {
   mount: {
     public: '/',
-    src: '/_dist_',
+    src: '/',
   },
   buildOptions: {
     baseUrl: 'https://github.com/Janusred/Avo2',
