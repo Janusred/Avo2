@@ -5,6 +5,6 @@ module.exports = {
     src: '/index.js',
   },
   buildOptions: {
-    baseUrl: 'https://github.com/Janusred/Avo2',
+    baseUrl: 'Avo2',
   },
 }
